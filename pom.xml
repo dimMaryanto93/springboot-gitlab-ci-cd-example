@@ -55,12 +55,16 @@
                 <groupId>pl.project13.maven</groupId>
                 <artifactId>git-commit-id-plugin</artifactId>
                 <configuration>
+                    <gitDescribe>
+                        <tags>true</tags>
+                    </gitDescribe>
                     <failOnNoGitDirectory>false</failOnNoGitDirectory>
                     <dateFormat>yyyy/MM/dd HH:mm</dateFormat>
                     <includeOnlyProperties>
                         <includeOnlyProperty>git.commit.id</includeOnlyProperty>
-                        <includeOnlyProperty>git.commit.user.name</includeOnlyProperty>
+                        <includeOnlyProperty>git.build.user.name</includeOnlyProperty>
                         <includeOnlyProperty>git.commit.user.email</includeOnlyProperty>
+                        <includeOnlyProperty>git.commit.message.full</includeOnlyProperty>
                         <includeOnlyProperty>git.commit.time</includeOnlyProperty>
                     </includeOnlyProperties>
                 </configuration>
