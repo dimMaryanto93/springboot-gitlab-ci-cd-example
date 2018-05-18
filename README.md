@@ -32,4 +32,9 @@ Setelah ditambahkan kemudian di push ke remote repository, dengan perintah seper
 
 ```bash 
 git push -u origin master
+
 ```
+
+## Jalankan Gitlab Runner
+
+
