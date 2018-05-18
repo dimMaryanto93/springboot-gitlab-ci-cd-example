@@ -1,0 +1,10 @@
+stages:
+  - build
+  - deploy
+maven-build:
+  image: maven:3-jdk-8
+  stage: build
+  script: "mvn package -DskipTests"
+  artifacts:
+    paths:
+      - target/*.jar
