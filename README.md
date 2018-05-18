@@ -35,6 +35,28 @@ git push -u origin master
 
 ```
 
-## Jalankan Gitlab Runner
+## Intall Gitlab Runner
+
+Untuk menginstall gitlab-runner, kita membutuhkan virtual machine atau host kita sendiri. cara installnya bisa dilihat di [website resminya](https://docs.gitlab.com/runner/)
+
+Sekarang kita register repository kita ke gitlab-runner dengan melihat dulu tokennya di repository contohya seperti berikut:
+
+![setting ci/cd](imgs/repository-settings.png)
+
+![token ci](imgs/repository-ci-token.png)
+
+Selelah itu baru kita gunakan command berikut:
+
+```bash
+gitlab-runner register
+
+# 1. input host gitlab repository contohnya http://192.168.1.61
+# 2. masukan token dari repository contohnya iPphgHznVcaqaGe1NU6y
+# 3. biarkan setinggan default langsung enter ja
+# 4. Setelah itu gitlab-runner kita harus tentukan pilihan mau connection lewat ssh, docker, dll kita pilih ja ssh
+# 5. Setelah itu kasih aja informasi alamat vps atau server kita seperti host, username, port ssh, password 
+```
+
+
 
 
