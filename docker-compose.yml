@@ -7,5 +7,10 @@ services:
       - 22:22
     volumes:
       - repoData:/var/opt/gitlab
+  ci-runner:
+    image: gitlab/gitlab-runner:latest
+    volumes:
+      - repoRunner:/etc/gitlab-runner
 volumes:
   repoData:
+  repoRunner:
